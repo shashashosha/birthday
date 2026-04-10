@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>My Baby</title>
+      <style>
+          body {background-color: rgb(231, 66, 99); color: snow; text-align: center;
+            opacity:0; animation: fadeInPage 0.6s forwards;
+          }
+          @keyframes fadeInPage {
+              to {opacity: 1;
+            }
+           }
+          h1 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;color: brown; max-width: 700px; line-height: 1.5;margin-bottom: 20px; margin-left: auto; margin-right: auto;
+          }
+          p {font-size: medium;font-family: cursive;font-style: italic;max-width: 700px; line-height: 1.5;margin-bottom: 20px; margin-left: auto; margin-right: auto;
+          }
+          button {font-family:'Courier New', Courier, monospace;font-style:oblique; font-weight: bold; background-color: crimson; color: burlywood;padding: 3mm;border: 1mm ;border-color: darkorange; border-radius: 1mm;margin-top: 20px; letter-spacing: 1px; display: inline-block; transition: 0.3s;
+          }
+          button:hover {transform: scale(1.1);box-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+          }
+          #pageContent.blur {filter: blur(5px);
+          }
+          video {position: fixed;top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.7); width: 60%; border-radius: 15px; opacity: 0; z-index: 10; transition: all 0.5s ease;
+          }
+          video.show {opacity: 1; transform: translate(-50%, -50%) scale (1);
+          }
+      </style>
+   </head>
+   <body>
+     <div id="pageContent">
+       <h1>Good Boy</h1>
+       <p>You have been the best boyfriend and partner one could ever ask for since day 1 of our relationship and definitely a gentleman since way longer. I admire you for the man you have beautifully grown into while my heart also aches for the silly playful boy who was tossed aside in the process of growing up. As your soon-to-be wife, no matter how old we become, i will always try to be the safe place for you to bring out your inner child, without worrying about judgements and responsibilities. You may turn 20 and out of nowhere be considered an adult, legally and socially, but to me, you are always my playful baby whom i will cherish and adore forever. Turning 20s is definitely sounding scary but with me by your side, i hope you can feel at ease atleast to a certain extent and take life the way it comes and go with the flow while also working towards that life we have always dreamt of building. I love you soo much my baby. Once age, Happiest Birthday cutiee and may this be the best one yet. Ummaahhh!!!!! </p>
+       <button onclick="showVideo()">See Mee 🎥💖</button>
+     </div>
+     <video id="myVideo" style="display: none;"...>
+        <source src="2BdayVid.mp4" type="video/mp4">
+     </video>
+     <script>
+        function showVideo() {
+          let video = document.getElementById("myVideo");
+          //blur background
+          document.getElementById("pageContent").classList.add("blur");
+          //show video 
+          video.style.display = "block";
+          setTimeout(() => {
+            video.classList.add("show");
+          }, 10);
+          video.play();
+        }
+     </script> 
+   </body>
+</html>
